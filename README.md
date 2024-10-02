@@ -18,6 +18,17 @@ print("Hello, World!")
 #> [1] "Hello, World!"
 ```
 
+## Packages
+
+As I develop my repo here are the packages that I use:
+
+``` r
+library(here) # A Simpler Way to Find Your Files
+#> here() starts at C:/Users/sarag/OneDrive/Documents/GEOG.712/My-First-Project/My-First-Repository
+library(tuneR) # Analysis of Music and Speech
+library(usethis) # Automate Package and Project Setup
+```
+
 # what is your main research interest
 
 My primary research interest lies in **bioinformatics**, specifically
@@ -39,10 +50,16 @@ personalized medicine.
 4.  Blank Space, Taylor Swift
 5.  Someone Like You, Adele
 
+I can use package {tuneR} to read `mp3` files.
+
 ``` r
- ("C:/Users/sarag/OneDrive/Documents/GEOG.712/My-First-Project/My-First-Repository/Music")
-#> [1] "C:/Users/sarag/OneDrive/Documents/GEOG.712/My-First-Project/My-First-Repository/Music"
+music_file <- readMP3(paste0(here(), "/Music/Taylor Swfit - blank space.mp3"))
 ```
+
+And, I can also play them, but not if I want to knit my README, so do
+not run.
+
+    tuneR::play(music_file)
 
 ## Favorite Equation
 
@@ -59,16 +76,11 @@ $$ E = mc^2 $$ \## Favorite Artists
 # Images
 
 ``` r
-("C:/Users/sarag/OneDrive/Documents/GEOG.712/My-First-Project/My-First-Repository/Images/OIP.jpeg")
-#> [1] "C:/Users/sarag/OneDrive/Documents/GEOG.712/My-First-Project/My-First-Repository/Images/OIP.jpeg"
+knitr::include_graphics(paste0(here(), "/Images/OIP.jpeg"))
 ```
 
-- My_First_Repository/
-  - README.Rmd
-  - Music/
-    - Favorite musics
-  - Images/
-    - OIP.jpeg
+![](Images/OIP.jpeg)<!-- --> - My_First_Repository/ - README.Rmd -
+Music/ - Favorite musics - Images/ - OIP.jpeg
 
 ``` r
 summary(cars)
